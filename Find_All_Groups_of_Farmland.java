@@ -13,7 +13,7 @@ private static void rec(int[][] land, int n, int m, int i, int j, int[] r, int[]
     rec(land, n, m, i, j + 1, r, c);
 }
 private  static List<List<Integer>> solve(int[][] land) {
-    List<List<Integer>> ans = new ArrayList<>();
+   List<List<Integer>> ans = new ArrayList<>();
    int n=land.length, m=land[0].length;
    for(int i=0;i<n;i++){
     for(int j=0;j<m;j++){
