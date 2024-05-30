@@ -1,12 +1,12 @@
 import java.util.Scanner;
 class TreeNode {
     int val;
-    TreeNode left;
-    TreeNode right;
+    TreeNode1 left;
+    TreeNode1 right;
     TreeNode(int val) {
         this.val = val;
     }
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    TreeNode(int val, TreeNode1 left, TreeNode1 right) {
         this.val = val;
         this.left = left;
         this.right = right;
@@ -14,7 +14,7 @@ class TreeNode {
 }
 
 public class Evaluate_Boolean_Binary_Tree {
-    public static boolean helper(TreeNode root) {
+    public static boolean helper(TreeNode1 root) {
         if (root.val == 0 || root.val == 1) {
             return root.val == 1;
         } else if (root.val == 2) {
@@ -33,16 +33,16 @@ public class Evaluate_Boolean_Binary_Tree {
                 arr[i]=Integer.parseInt(input[i]);
             }
         }
-        TreeNode root = createTree(arr, 0);
+        TreeNode1 root = createTree(arr, 0);
         boolean result = helper(root);
         System.out.println(result);
     }
 
-    private static TreeNode createTree(Integer[] arr, int idx) {
+    private static TreeNode1 createTree(Integer[] arr, int idx) {
         if (idx >= arr.length || arr[idx] == null) {
             return null;
         }
-        TreeNode root = new TreeNode(arr[idx]);
+        TreeNode1 root = new TreeNode1(arr[idx]);
         int leftIdx = 2 * idx+1 ;
         int rightIdx = 2 * idx + 2;
         root.left = createTree(arr, leftIdx);
